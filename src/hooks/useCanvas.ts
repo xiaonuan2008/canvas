@@ -127,8 +127,8 @@ export function useCanvas(canvasRef: React.RefObject<HTMLCanvasElement | null>) 
         scaleY: scale,
         customId: generateId(),
       } as any);
-      fc.add(img);
-      fc.setActiveObject(img);
+      fc.add(img as any);
+      fc.setActiveObject(img as any);
       fc.renderAll();
 
       addObject({

@@ -78,7 +78,7 @@ export function LayerPanel() {
       newObjects.forEach((obj, i) => {
         const fObj = fObjs.find((o: any) => o.customId === obj.id);
         if (fObj) {
-          canvas.moveObjectTo(fObj, i);
+          (canvas as any).moveObjectTo(fObj, i);
         }
       });
       canvas.renderAll();
@@ -96,7 +96,7 @@ export function LayerPanel() {
       newObjects.forEach((obj, i) => {
         const fObj = fObjs.find((o: any) => o.customId === obj.id);
         if (fObj) {
-          canvas.moveObjectTo(fObj, i);
+          (canvas as any).moveObjectTo(fObj, i);
         }
       });
       canvas.renderAll();
